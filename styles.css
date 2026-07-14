@@ -61,81 +61,59 @@ body {
 
 /* -------------------------------BUTTON------------------------------- */
 
-/* From Uiverse.io by Cevorob */
 
 
 #clickMe {
+    border: none;
+    display: block;
     position: relative;
-    height: 65px;
-    padding: 0 50px;
-
-    border: 2px solid #ffffff;
+    padding: 0.7em 2.4em;
+    font-size: 18px;
     background: transparent;
-
-    color: #ffffff;
-
-    user-select: none;
-    white-space: nowrap;
-
-    transition: all .15s ease;
-
-    font-family: "New Amsterdam", sans-serif;
-    font-size: 2rem;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-}
-
-#clickMe::before,
-#clickMe::after {
-    content: "";
-    position: absolute;
-
-    background: transparent;
-
-    transition: all .2s ease;
-}
-
-#clickMe::before {
-    width: calc(100% + 6px);
-    height: calc(100% - 16px);
-
-    top: 8px;
-    left: -3px;
-
-    border-left: 2px solid #fff;
-    border-right: 2px solid #fff;
-}
-
-#clickMe::after {
-    width: calc(100% - 16px);
-    height: calc(100% + 6px);
-
-    top: -3px;
-    left: 8px;
-
-    border-top: 2px solid #fff;
-    border-bottom: 2px solid #fff;
-}
-
-#clickMe:hover {
     cursor: pointer;
-}
-
-#clickMe:hover::before {
-    height: calc(100% - 32px);
-    top: 16px;
-}
-
-#clickMe:hover::after {
-    width: calc(100% - 32px);
-    left: 16px;
-}
-
-#clickMe:active {
-    transform: scale(.96);
+    user-select: none;
+    overflow: hidden;
+    color: #ffffff;
+    z-index: 1;
+    font-family: "New Amsterdam", sans-serif;
+    font-size: 3rem;
+    font-weight: 500;
 }
 
 #clickMe span {
-    position: relative;
-    z-index: 2;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: -1;
+    border: 4px solid rgb(255, 255, 255);
+}
+
+#clickMe span::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 8%;
+    height: 500%;
+    background: var(--lightgray);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-60deg);
+    transition: all 0.3s;
+}
+
+#clickMe:hover span::before {
+    transform: translate(-50%, -50%) rotate(-90deg);
+    width: 100%;
+    background: #000000;
+}
+
+#clickMe:hover {
+    color: white;
+}
+
+#clickMe:active span::before {
+    background: #000000;
 }
