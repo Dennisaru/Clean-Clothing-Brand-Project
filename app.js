@@ -2,7 +2,6 @@ const start = document.querySelector(".start");
 const preview = document.querySelector(".preview");
 const allClothing = document.querySelector(".all-clothing");
 const beginBtn = document.getElementById("clickMe");
-const seeMoreBtn = document.getElementById("seeMore");
 
 const images = [
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSa0Hl104jY2t_YoneHMrQDTkNU2fo8S97UQ_u9srSxZA&s=10",
@@ -27,12 +26,25 @@ function loadPreview() {
         .join("");
 
     preview.innerHTML = `
+    <div class="brandHeader">
+        <h1>Leyux</h1>
+    </div>
         <div class="preview-container">
             ${previewCards}
         </div>
 
-        <button id="seeMore">See more</button>
+        <button id="seeMore" class="btn">
+                    See more
+                    <span></span>
+        </button>
     `;
+
+    const seeMoreBtn = document.getElementById("seeMore");
+
+    seeMoreBtn.addEventListener("click", () => {
+        preview.style.display = "none";
+        allClothing.style.display = "block";
+    });
 }
 
 beginBtn.addEventListener("click", () => {
