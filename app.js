@@ -2,6 +2,7 @@ const start = document.querySelector(".start");
 const preview = document.querySelector(".preview");
 const allClothing = document.querySelector(".all-clothing");
 const beginBtn = document.getElementById("clickMe");
+const cursor = document.querySelector(".cursor");
 
 const images = [
     "https://images.pexels.com/photos/29226106/pexels-photo-29226106.jpeg",
@@ -9,6 +10,17 @@ const images = [
     "https://images.pexels.com/photos/19177046/pexels-photo-19177046.jpeg",
     "https://images.pexels.com/photos/11308714/pexels-photo-11308714.jpeg"
 ];
+
+
+document.addEventListener("mousemove", (event) => {
+
+    const { width, height } = cursor.getBoundingClientRect()
+
+    cursor.style.left = `${event.clientX - width / 2}px`
+    cursor.style.top = `${event.clientY - height / 2}px`
+})
+
+
 
 function createCard(image) {
     return `
@@ -29,6 +41,7 @@ function loadPreview() {
     preview.innerHTML = `
     <div class="brandHeader">
         <h1>Auren</h1>
+        <h3>-Summer Collection-</h3>
     </div>
         <div class="preview-container">
             ${previewCards}

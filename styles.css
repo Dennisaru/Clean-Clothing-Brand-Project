@@ -14,9 +14,28 @@ body {
     overflow-x: hidden;
 }
 
+.cursor {
+    width: 2em;
+    height: 2em;
+    background: lightgray;
+    pointer-events: none;
+    filter: blur(4px);
+    position: absolute;
+    border-radius: 100%;
+    border: 1px solid #000000;
+    z-index: 9999;
+}
+
 h1 {
     font-family: "Forum", sans-serif;
-    font-size: 3rem;
+    font-size: 5rem;
+    font-weight: 900;
+}
+
+h3 {
+    font-family: "Forum", sans-serif;
+    font-size: 2rem;
+    font-weight: 200;
 }
 
 .brandHeader {
@@ -25,7 +44,9 @@ h1 {
     padding: 4rem 4rem 0;
 
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 /* ---------------------------------------------------------------------------- */
@@ -97,7 +118,7 @@ h1 {
     grid-template-columns: repeat(3, 1fr);
     /* gap: 2rem; */
 
-    padding: 1rem;
+    padding: .5rem;
 }
 
 .all-clothing {
