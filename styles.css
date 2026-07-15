@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Forum&family=New+Amsterdam&display=swap');
 
 /* -------------------------------BASE SETTINGS------------------------------- */
 
@@ -10,12 +10,12 @@
 
 body {
     min-height: 100vh;
-    background: #000;
+    background: #ffffff;
     overflow-x: hidden;
 }
 
 h1 {
-    font-family: "New Amsterdam", sans-serif;
+    font-family: "Forum", sans-serif;
     font-size: 3rem;
 }
 
@@ -97,7 +97,7 @@ h1 {
     grid-template-columns: repeat(3, 1fr);
     /* gap: 2rem; */
 
-    padding: 4rem;
+    padding: 1rem;
 }
 
 .all-clothing {
@@ -117,7 +117,7 @@ h1 {
     overflow: hidden;
     z-index: 1;
 
-    font-family: "New Amsterdam", sans-serif;
+    font-family: "Forum", sans-serif;
     font-weight: 500;
 
     transition: color 0.3s ease;
@@ -176,5 +176,5 @@ h1 {
     background-color: black;
     /* border: 3px solid black; */
 
-    margin: 3rem auto 5rem;
+    margin: 1.5rem auto 4rem;
 }

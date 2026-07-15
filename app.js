@@ -4,16 +4,17 @@ const allClothing = document.querySelector(".all-clothing");
 const beginBtn = document.getElementById("clickMe");
 
 const images = [
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSa0Hl104jY2t_YoneHMrQDTkNU2fo8S97UQ_u9srSxZA&s=10",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRccB8HoQGX-S828rBlHJ16MKFdq7zZ_44ymMOj0gAdVQ&s=10",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVk6MDo73GdDifSP_VcAxSeI1r9mgB5y-hay_tV4PnKQ&s=10"
+    "https://images.pexels.com/photos/29226106/pexels-photo-29226106.jpeg",
+    "https://images.pexels.com/photos/29668943/pexels-photo-29668943.jpeg",
+    "https://images.pexels.com/photos/19177046/pexels-photo-19177046.jpeg",
+    "https://images.pexels.com/photos/11308714/pexels-photo-11308714.jpeg"
 ];
 
 function createCard(image) {
     return `
         <div class="card">
             <a href="#">
-                <img src="${image}" alt="Leyux streetwear clothing">
+                <img src="${image}" alt="Auren streetwear clothing">
             </a>
         </div>
     `;
@@ -27,7 +28,7 @@ function loadPreview() {
 
     preview.innerHTML = `
     <div class="brandHeader">
-        <h1>Leyux</h1>
+        <h1>Auren</h1>
     </div>
         <div class="preview-container">
             ${previewCards}
