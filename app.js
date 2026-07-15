@@ -3,6 +3,7 @@ const preview = document.querySelector(".preview");
 const allClothing = document.querySelector(".all-clothing");
 const beginBtn = document.getElementById("clickMe");
 const cursor = document.querySelector(".cursor");
+const cards = document.querySelectorAll(".card");
 
 const images = [
     "https://images.pexels.com/photos/29226106/pexels-photo-29226106.jpeg",
@@ -32,6 +33,8 @@ function createCard(image) {
     `;
 }
 
+
+
 function loadPreview() {
     const previewCards = images
         .slice(0, 3)
@@ -60,6 +63,16 @@ function loadPreview() {
         allClothing.style.display = "block";
     });
 }
+
+cards.forEach(card => {
+    card.addEventListener("mouseenter", () => {
+        cursor.classList.add("grow");
+    });
+
+    card.addEventListener("mouseleave", () => {
+        cursor.classList.remove("grow");
+    });
+});
 
 beginBtn.addEventListener("click", () => {
     start.style.display = "none";
