@@ -16,6 +16,56 @@ body {
 
 }
 
+header {
+    display: none;
+    background-image: url(/assets/images/auren-bg.png);
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+nav {
+    display: flex;
+    font-family: "Forum", sans-serif;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    top: 22%;
+    color: #000000;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    list-style: none;
+}
+
+nav a {
+    position: relative;
+    text-decoration: none;
+    color: #000;
+    font-size: 3rem;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -6px;
+    width: 0;
+    height: 1px;
+    background: #000;
+    transition: all .3s ease;
+    transform: translateX(-50%);
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
 .cursor {
     width: 22px;
     height: 22px;
@@ -79,7 +129,7 @@ h3 {
     filter: grayscale(100%) contrast(1.2) brightness(0.6);
 }
 
-/* Mörkt lager ovanpå videon */
+
 .start::before {
     content: "";
     position: absolute;

@@ -4,6 +4,7 @@ const allClothing = document.querySelector(".all-clothing");
 const beginBtn = document.getElementById("clickMe");
 const cursor = document.querySelector(".cursor");
 const cards = document.querySelectorAll(".card");
+const head = document.querySelector("header");
 
 const images = [
     "https://images.pexels.com/photos/29226106/pexels-photo-29226106.jpeg",
@@ -19,7 +20,7 @@ document.addEventListener("mousemove", (event) => {
 
     cursor.style.left = `${event.clientX - width / 2}px`
     cursor.style.top = `${event.clientY - height / 2}px`
-})
+});
 
 
 
@@ -61,6 +62,7 @@ function loadPreview() {
     seeMoreBtn.addEventListener("click", () => {
         preview.style.display = "none";
         allClothing.style.display = "block";
+        head.style.display = "block";
     });
 }
 
@@ -80,3 +82,4 @@ beginBtn.addEventListener("click", () => {
 
     loadPreview();
 });
+
